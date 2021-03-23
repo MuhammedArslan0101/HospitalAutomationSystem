@@ -1,0 +1,5 @@
+# HospitalAutomationSystem
+
+JavaFXML  
+IDE : eclipse 
+
