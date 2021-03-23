@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C8CD6F;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.yemekController">
+   <right>
+      <Pane prefHeight="290.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#addyemek" prefHeight="25.0" prefWidth="64.0" text="Add" />
+            <Button layoutX="14.0" layoutY="120.0" mnemonicParsing="false" onAction="#YemekGuncel" prefHeight="25.0" prefWidth="64.0" text="Update" />
+            <Button layoutX="114.0" layoutY="42.0" mnemonicParsing="false" onAction="#yemekSil" prefHeight="25.0" prefWidth="64.0" text="Delete" />
+            <Button layoutX="108.0" layoutY="120.0" mnemonicParsing="false" onAction="#clearForm" prefHeight="25.0" prefWidth="77.0" text="ClearForm" />
+            <Button layoutX="14.0" layoutY="235.0" mnemonicParsing="false" onAction="#showFile" text="Farklı Read" />
+            <Button layoutX="126.0" layoutY="235.0" mnemonicParsing="false" onAction="#kaydet" text="SaveFile" />
+            <Button layoutX="74.0" layoutY="179.0" mnemonicParsing="false" onAction="#deleteAll" text="Delete All" />
+            <Button layoutX="14.0" layoutY="179.0" mnemonicParsing="false" onAction="#readtext" text="Read" />
+            <Button layoutX="55.0" layoutY="3.0" mnemonicParsing="false" onAction="#importData" text="İmport Data" />
+         </children>
+      </Pane>
+   </right>
+   <left>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="idyemekT" layoutX="26.0" layoutY="14.0" promptText="id" />
+            <TextField fx:id="adyemekhastaT" layoutX="26.0" layoutY="59.0" promptText="AdSoyadi" />
+            <TextField fx:id="odanoyemekT" layoutX="26.0" layoutY="100.0" promptText="OdaNo" />
+            <ComboBox fx:id="durumyemek_combox" layoutX="25.0" layoutY="177.0" prefWidth="150.0" promptText="durum" />
+            <ComboBox fx:id="turyemek_Combox" layoutX="25.0" layoutY="142.0" prefWidth="150.0" promptText="tur" />
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <TableView fx:id="yemek_tablo" onMouseClicked="#getSelected" prefHeight="290.0" prefWidth="138.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idyemekC" prefWidth="64.0" text="İd" />
+          <TableColumn fx:id="adyemekC" prefWidth="115.0" text="AdSoyadi" />
+            <TableColumn fx:id="odanoC" prefWidth="94.0" text="OdaNo" />
+            <TableColumn fx:id="yemekturC" prefWidth="122.0" text="YemekTur" />
+            <TableColumn fx:id="durumyemekC" prefWidth="115.0" text="Durum" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <TextArea fx:id="textareayemek" prefHeight="110.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <TextField fx:id="search" alignment="TOP_CENTER" onKeyPressed="#search" promptText="Search...." BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

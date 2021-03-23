@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="337.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="360.0" prefWidth="500" style="-fx-background-color: #E7FFFF;">
+         <children>
+            <Pane prefHeight="337.0" prefWidth="519.0">
+               <children>
+                  <ImageView fitHeight="175.0" fitWidth="229.0" layoutX="13.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../application/img/WIN_20190319_13_56_47_Pro.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="128.0" layoutY="23.0" prefHeight="30.0" prefWidth="290.0" text="Hastane Otamasyon sistemi" textAlignment="CENTER" textFill="#bf1082">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="255.0" layoutY="78.0" prefHeight="17.0" prefWidth="206.0" text="Bu uygulama Muhammed ve Yusuf">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="275.0" layoutY="158.0" prefHeight="19.0" prefWidth="167.0" text="mhd.arslan07@gmail.com" textFill="#d02222">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="288.0" prefHeight="17.0" prefWidth="362.0" text="© Copyright 2019  Muhammed And Yusuf All Rights Reserved. ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="267.0" layoutY="234.0" text="yusufkaragoz279@gmail.com" textFill="#860c0c">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="255.0" layoutY="104.0" prefHeight="17.0" prefWidth="157.0" text="tarafından yapılyor. ">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="255.0" layoutY="134.0" prefHeight="17.0" prefWidth="118.0" text="Muhammed ARSLAN" textFill="#4415bc">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="255.0" layoutY="209.0" prefHeight="19.0" prefWidth="118.0" text="Yusuf KARAGOZ" textFill="#5c0ba8">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="353.0" layoutY="181.0" prefHeight="17.0" prefWidth="108.0" text="02160001092" />
+                  <Label layoutX="373.0" layoutY="265.0" text="02170201053" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

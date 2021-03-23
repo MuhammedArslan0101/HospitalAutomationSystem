@@ -1,0 +1,3 @@
+1,muhamed,789547,A+,Acil,Ahmet,2019-05-25
+2,yusuf,789547,A+,Acil,Ahmet,2019-05-25
+3,dfd,3211,A+,Yogun Bakim,ahmet,2019-05-09

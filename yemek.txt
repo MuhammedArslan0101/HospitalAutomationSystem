@@ -1,0 +1,3 @@
+1,muhamed,55,sabah yemegi,verildi
+2,yusuf,66,aksam yemegi,verilmedi
+3,dsf,3,sabah yemegi,verldi

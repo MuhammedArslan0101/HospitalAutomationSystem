@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.odalarController">
+   <bottom>
+      <TableView fx:id="table_oda" onMouseClicked="#getSelected" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="adiC" prefWidth="153.0" text="AdiSoyadi" />
+          <TableColumn fx:id="odaC" prefWidth="132.0" text="OdaNo" />
+          <TableColumn fx:id="kisiC" prefWidth="166.0" text="KişiSayisi" />
+            <TableColumn fx:id="durumuC" prefWidth="148.0" text="OdaDurumu" />
+        </columns>
+      </TableView>
+   </bottom>
+   <top>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="adT" layoutX="15.0" layoutY="23.0" promptText="AdiSoyadi" />
+            <TextField fx:id="kisisT" layoutX="15.0" layoutY="66.0" promptText="KişiSayisi" />
+            <TextField fx:id="odanoT" layoutX="15.0" layoutY="113.0" promptText="OdaNo" />
+            <ComboBox fx:id="durumT" layoutX="14.0" layoutY="155.0" prefWidth="150.0" promptText="OdaDurumu" />
+            <Button layoutX="189.0" layoutY="22.0" mnemonicParsing="false" onAction="#ekle" prefHeight="25.0" prefWidth="59.0" text="Ekle   " />
+            <Button layoutX="189.0" layoutY="65.0" mnemonicParsing="false" onAction="#sil" prefHeight="25.0" prefWidth="60.0" text="Sil           " />
+            <Button layoutX="189.0" layoutY="112.0" mnemonicParsing="false" onAction="#guncelle" text="Guncelle" />
+            <Button layoutX="270.0" layoutY="22.0" mnemonicParsing="false" onAction="#clear" text="ClearForm" />
+            <TextField fx:id="search" layoutX="189.0" layoutY="154.0" onKeyPressed="#search" promptText="AramaMotoru" />
+            <Button layoutX="273.0" layoutY="65.0" mnemonicParsing="false" onAction="#readFile" text="ReadText" />
+            <TextArea fx:id="textAreaT" layoutX="376.0" layoutY="13.0" prefHeight="175.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

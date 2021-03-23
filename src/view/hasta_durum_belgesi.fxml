@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.hastadurumBelgesiController">
+   <top>
+      <TableView fx:id="hd_table" onMouseClicked="#getSelected" prefHeight="208.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idhC" prefWidth="41.0" text="İD" />
+          <TableColumn fx:id="adihC" prefWidth="76.0" text="ADİSOYAD" />
+            <TableColumn fx:id="tchC" prefWidth="83.0" text="TC" />
+            <TableColumn fx:id="hsthC" prefWidth="87.0" text="Hastalik" />
+            <TableColumn fx:id="drhC" prefWidth="106.0" text="Doktor" />
+            <TableColumn fx:id="kisimC" prefWidth="100.0" text="Kısım" />
+            <TableColumn fx:id="nothC" prefWidth="106.0" text="Not" />
+        </columns>
+      </TableView>
+   </top>
+   <bottom>
+      <TextArea fx:id="textht" prefHeight="219.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <AnchorPane prefHeight="173.0" prefWidth="902.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="adhT" layoutX="-30.0" layoutY="64.0" promptText="AdiSoyad" />
+            <TextField fx:id="tchT" layoutX="-30.0" layoutY="99.0" promptText="TC" />
+            <TextField fx:id="hastalikT" layoutX="-30.0" layoutY="148.0" promptText="Hastalik" />
+            <ComboBox fx:id="drComboboxT" layoutX="143.0" layoutY="51.0" prefWidth="150.0" promptText="Doktor" />
+            <ComboBox fx:id="kisimComboboxT" layoutX="143.0" layoutY="99.0" prefWidth="150.0" promptText="Kısım" />
+            <TextField fx:id="idhT" layoutX="-30.0" layoutY="29.0" promptText="ID" />
+            <TextField fx:id="notT" layoutX="144.0" layoutY="148.0" promptText="Not" />
+            <Button layoutX="325.0" layoutY="51.0" mnemonicParsing="false" onAction="#jhasEkle" prefHeight="25.0" prefWidth="59.0" text="Ekle" />
+            <Button layoutX="401.0" layoutY="52.0" mnemonicParsing="false" onAction="#Sil" prefHeight="25.0" prefWidth="49.0" text="Sil" />
+            <Button layoutX="325.0" layoutY="99.0" mnemonicParsing="false" onAction="#Guncel" text="Guncelle" />
+            <TextField fx:id="search" layoutX="317.0" layoutY="148.0" onKeyPressed="#search" promptText="Arama" />
+            <Button layoutX="401.0" layoutY="99.0" mnemonicParsing="false" onAction="#clearForm" prefHeight="25.0" prefWidth="52.0" text="Clear" />
+            <Button layoutX="466.0" layoutY="52.0" mnemonicParsing="false" onAction="#deleteAll" text="DeleteAll" />
+            <Button layoutX="478.0" layoutY="99.0" mnemonicParsing="false" onAction="#kaydet12" text="Farklı Kaydet" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

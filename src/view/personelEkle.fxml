@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.personel_ekle">
+   <left>
+      <Pane prefHeight="318.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="soyperT" layoutX="51.0" layoutY="90.0" prefHeight="24.0" prefWidth="149.0" promptText="SOYAD" />
+            <TextField fx:id="tcperT" layoutX="51.0" layoutY="125.0" promptText="TcKimlik" />
+            <TextField fx:id="teleperT" layoutX="51.0" layoutY="197.0" promptText="Telefon" />
+            <TextField fx:id="maasperT" layoutX="51.0" layoutY="239.0" promptText="Maas" />
+            <TextField fx:id="adperT" layoutX="51.0" layoutY="56.0" prefHeight="24.0" prefWidth="149.0" promptText="AD" />
+            <TextField fx:id="idperT" layoutX="51.0" layoutY="14.0" prefHeight="24.0" prefWidth="149.0" promptText="ID" />
+            <ComboBox fx:id="polikper_combox" layoutX="50.0" layoutY="162.0" prefWidth="150.0" promptText="Poliklink" />
+            <DatePicker fx:id="tarihperT" layoutX="51.0" layoutY="281.0" prefHeight="25.0" prefWidth="151.0" />
+            <Label layoutX="10.0" layoutY="18.0" text="İD">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="60.0" text="Ad" />
+            <Label layoutX="4.0" layoutY="94.0" prefHeight="17.0" prefWidth="38.0" text="SoyAd :" />
+            <Label layoutX="10.0" layoutY="129.0" text="Tc : " />
+            <Label layoutX="10.0" layoutY="166.0" text="Polik :" />
+            <Label layoutX="10.0" layoutY="201.0" text="Tele : " />
+            <Label layoutX="10.0" layoutY="243.0" text="Maas :" />
+            <Label layoutX="10.0" layoutY="285.0" text="Tarih : " />
+            <Button layoutX="72.0" layoutY="321.0" mnemonicParsing="false" onAction="#clearForm" text="ClearForm" />
+         </children>
+      </Pane>
+   </left>
+   <right>
+      <Pane prefHeight="310.0" prefWidth="195.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="120.0" layoutY="132.0" mnemonicParsing="false" onAction="#deleteAll" prefHeight="30.0" prefWidth="70.0" text="Tablo Sil" />
+            <Button layoutX="26.0" layoutY="132.0" mnemonicParsing="false" onAction="#personelGuncel" prefHeight="30.0" prefWidth="70.0" text="Guncelle" />
+            <Button layoutX="120.0" layoutY="58.0" mnemonicParsing="false" onAction="#personelSil" prefHeight="30.0" prefWidth="70.0" text="Silme" />
+            <Button layoutX="26.0" layoutY="58.0" mnemonicParsing="false" onAction="#perEkle" prefHeight="30.0" prefWidth="70.0" text="Ekle" />
+            <Button layoutX="61.0" layoutY="199.0" mnemonicParsing="false" onAction="#kaydet" prefHeight="30.0" prefWidth="105.0" text="Dosyaya Kaydet" />
+            <TextField fx:id="search" layoutX="23.0" layoutY="264.0" onKeyPressed="#search" promptText="search.............." />
+            <ComboBox fx:id="personeltur_combox" layoutX="23.0" layoutY="14.0" prefWidth="150.0" promptText="tur" />
+            <Button layoutX="80.0" layoutY="99.0" mnemonicParsing="false" onAction="#importData" text="import" />
+         </children>
+      </Pane>
+   </right>
+   <bottom>
+      <Label text="Personel İşlemleri" textFill="#dd1717" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="44.0" />
+         </font>
+      </Label>
+   </bottom>
+   <center>
+      <TableView fx:id="per_table" onMouseClicked="#getSelected" prefHeight="318.0" prefWidth="199.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="idC" prefWidth="70.0" text="ID" />
+          <TableColumn fx:id="adC" prefWidth="110.0" text="Ad" />
+          <TableColumn fx:id="soyadC" prefWidth="120.0" text="Soyad" />
+            <TableColumn fx:id="kimlikC" prefWidth="130.0" text="TcKimlik" />
+            <TableColumn fx:id="personelturC" prefWidth="85.0" text="personelTur" />
+            <TableColumn fx:id="polikC" prefWidth="130.0" text="Poliklink" />
+            <TableColumn fx:id="maasC" prefWidth="105.0" text="Maas" />
+            <TableColumn fx:id="teleC" prefWidth="105.0" text="Telefon" />
+            <TableColumn fx:id="tarihC" prefWidth="105.0" text="Baş Tarihi" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

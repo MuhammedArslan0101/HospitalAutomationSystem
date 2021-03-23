@@ -1,0 +1,3 @@
+1,muhamed,Arslan,418987589,mudur,536955558,2500,Acil,2020-03-02
+2,yusuf,Arslan,89756973,mudur yrd,537589689,2500,YogunBakim,2020-03-02
+3,musa,ak,5432,Doktor,531,150,Cerrah,2020-03-12

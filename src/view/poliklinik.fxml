@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.poliklinkController">
+   <children>
+      <AnchorPane layoutX="-8.0" prefHeight="497.0" prefWidth="485.0" style="-fx-background-color: #8BFF86;">
+         <children>
+            <Button layoutX="106.0" layoutY="230.0" mnemonicParsing="false" onAction="#polEkle" prefHeight="35.0" prefWidth="70.0" text="Ekle" />
+            <Button layoutX="225.0" layoutY="230.0" mnemonicParsing="false" onAction="#polSil" prefHeight="35.0" prefWidth="70.0" text="sil" />
+            <Button layoutX="343.0" layoutY="230.0" mnemonicParsing="false" onAction="#polGuncel" prefHeight="35.0" prefWidth="70.0" text="guncel" />
+            <Label layoutX="149.0" layoutY="38.0" prefHeight="35.0" prefWidth="222.0" text="Poliklinik İşlemleri" textFill="#ab1212">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="polisimT" layoutX="174.0" layoutY="127.0" promptText="Poliklinik ismi" />
+            <TextField fx:id="idpolT" layoutX="174.0" layoutY="90.0" promptText="id" />
+            <TableView fx:id="pol_tablo" layoutX="78.0" layoutY="297.0" onMouseClicked="#getSelectedpol" prefHeight="200.0" prefWidth="342.0">
+              <columns>
+                <TableColumn fx:id="idpolC" prefWidth="50.0" text="id" />
+                <TableColumn fx:id="polisimC" prefWidth="100.0" text="Pol isim" />
+                  <TableColumn fx:id="nobetC" prefWidth="100.0" text="Nobetçi" />
+                  <TableColumn fx:id="saatpolC" prefWidth="90.0" text="Saat" />
+              </columns>
+            </TableView>
+            <TextField fx:id="polnobetT" layoutX="174.0" layoutY="163.0" promptText="nobetçi" />
+            <TextField fx:id="claismaT" layoutX="174.0" layoutY="198.0" promptText="claisma saat" />
+            <Label layoutX="92.0" layoutY="94.0" text="id" />
+            <Label layoutX="92.0" layoutY="131.0" text="isim" />
+            <Label layoutX="92.0" layoutY="167.0" text="Dr" />
+            <Label layoutX="92.0" layoutY="202.0" text="saat" />
+            <Button layoutX="387.0" layoutY="119.0" mnemonicParsing="false" onAction="#clearForm" text="ClearForm" />
+            <TextField fx:id="search" alignment="TOP_CENTER" layoutX="168.0" layoutY="272.0" onKeyPressed="#search" promptText="Search" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
